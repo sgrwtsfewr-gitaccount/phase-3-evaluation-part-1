@@ -1,0 +1,223 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Phase-3 VIP Protection Evaluation</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f7f8;
+      margin: 0; padding: 20px;
+      color: #333;
+    }
+    .container {
+      max-width: 720px;
+      margin: auto;
+      background: white;
+      padding: 30px 40px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #2c3e50;
+    }
+    h2 {
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 6px;
+      margin-top: 30px;
+      color: #2c3e50;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: 600;
+    }
+    input[type=text], input[type=number], input[type=date], select, textarea {
+      width: 100%;
+      padding: 8px 10px;
+      margin-top: 6px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+      box-sizing: border-box;
+      resize: vertical;
+    }
+    .two-column {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+    .two-column > div {
+      flex: 1 1 48%;
+    }
+    button {
+      margin-top: 30px;
+      width: 100%;
+      padding: 14px;
+      font-weight: 700;
+      font-size: 16px;
+      background-color: #2c3e50;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+    button:hover {
+      background-color: #1a252f;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Phase-3 VIP Protection Evaluation</h1>
+    <form>
+      <h2>Candidate Information</h2>
+      <div class="two-column">
+        <div>
+          <label for="candidateName">Full Name</label>
+          <input type="text" id="candidateName" name="candidateName" required />
+        </div>
+        <div>
+          <label for="rank">Rank</label>
+          <input type="text" id="rank" name="rank" required />
+        </div>
+      </div>
+      <label for="unit">Unit/Division</label>
+      <input type="text" id="unit" name="unit" />
+
+      <label for="evalDate">Date of Evaluation</label>
+      <input type="date" id="evalDate" name="evalDate" required />
+
+      <h2>VIP Assignment</h2>
+      <div class="two-column">
+        <div>
+          <label for="vipName">VIP Name / Codename</label>
+          <input type="text" id="vipName" name="vipName" required />
+        </div>
+        <div>
+          <label for="dutyDuration">Time on Duty (minutes)</label>
+          <input type="number" id="dutyDuration" name="dutyDuration" min="1" required />
+        </div>
+      </div>
+      <div class="two-column">
+        <div>
+          <label for="missionType">Mission Type</label>
+          <select id="missionType" name="missionType" required>
+            <option value="">-- Select --</option>
+            <option>Escort</option>
+            <option>Stationary Guard</option>
+            <option>Extraction</option>
+          </select>
+        </div>
+        <div>
+          <label for="environment">Environment</label>
+          <select id="environment" name="environment" required>
+            <option value="">-- Select --</option>
+            <option>Indoor</option>
+            <option>Outdoor</option>
+            <option>High Threat Zone</option>
+          </select>
+        </div>
+      </div>
+
+      <h2>Performance Checklist</h2>
+      <label for="visualContact">Maintained visual contact with VIP</label>
+      <select id="visualContact" name="visualContact" required>
+        <option value="">--</option>
+        <option value="pass">Pass</option>
+        <option value="fail">Fail</option>
+      </select>
+
+      <label for="communication">Clear communication with VIP/team</label>
+      <select id="communication" name="communication" required>
+        <option value="">--</option>
+        <option value="pass">Pass</option>
+        <option value="fail">Fail</option>
+      </select>
+
+      <label for="protocols">Followed protection protocols</label>
+      <select id="protocols" name="protocols" required>
+        <option value="">--</option>
+        <option value="pass">Pass</option>
+        <option value="fail">Fail</option>
+      </select>
+
+      <label for="threatResponse">Reacted appropriately to threats</label>
+      <select id="threatResponse" name="threatResponse" required>
+        <option value="">--</option>
+        <option value="pass">Pass</option>
+        <option value="fail">Fail</option>
+      </select>
+
+      <label for="formation">Maintained correct formation/distance</label>
+      <select id="formation" name="formation" required>
+        <option value="">--</option>
+        <option value="pass">Pass</option>
+        <option value="fail">Fail</option>
+      </select>
+
+      <label for="professionalism">Displayed professionalism and discipline</label>
+      <select id="professionalism" name="professionalism" required>
+        <option value="">--</option>
+        <option value="pass">Pass</option>
+        <option value="fail">Fail</option>
+      </select>
+
+      <h2>Scoring (0-10)</h2>
+      <div class="two-column">
+        <div>
+          <label for="tacticalAwareness">Tactical Awareness</label>
+          <input type="number" id="tacticalAwareness" name="tacticalAwareness" min="0" max="10" />
+        </div>
+        <div>
+          <label for="communicationScore">Communication & Coordination</label>
+          <input type="number" id="communicationScore" name="communicationScore" min="0" max="10" />
+        </div>
+      </div>
+      <div class="two-column">
+        <div>
+          <label for="threatResponseScore">Threat Response & Control</label>
+          <input type="number" id="threatResponseScore" name="threatResponseScore" min="0" max="10" />
+        </div>
+        <div>
+          <label for="protocolAdherence">Protocol Adherence</label>
+          <input type="number" id="protocolAdherence" name="protocolAdherence" min="0" max="10" />
+        </div>
+      </div>
+      <label for="composure">Composure & Discipline</label>
+      <input type="number" id="composure" name="composure" min="0" max="10" />
+
+      <h2>Supervisor Feedback</h2>
+      <label for="feedback">Comments</label>
+      <textarea id="feedback" name="feedback" rows="5" placeholder="Enter supervisor notes here..."></textarea>
+
+      <h2>Verification</h2>
+      <div class="two-column">
+        <div>
+          <label for="supervisorName">Supervisor Name</label>
+          <input type="text" id="supervisorName" name="supervisorName" required />
+        </div>
+        <div>
+          <label for="supervisorRank">Rank</label>
+          <input type="text" id="supervisorRank" name="supervisorRank" required />
+        </div>
+      </div>
+      <label for="verificationDate">Date</label>
+      <input type="date" id="verificationDate" name="verificationDate" required />
+
+      <label for="finalResult">Final Result</label>
+      <select id="finalResult" name="finalResult" required>
+        <option value="">-- Select --</option>
+        <option value="pass">PASS</option>
+        <option value="fail">FAIL</option>
+      </select>
+
+      <button type="submit">Submit Evaluation</button>
+    </form>
+  </div>
+</body>
+</html>
