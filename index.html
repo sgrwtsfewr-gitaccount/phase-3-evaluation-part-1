@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -7,13 +6,13 @@
     body {
       font-family: Arial, sans-serif;
       padding: 30px;
-      background: #f4f4f4;
+      background: #f0f2f5;
     }
 
     form {
       max-width: 650px;
       margin: auto;
-      background: white;
+      background: #fff;
       padding: 25px;
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
@@ -64,16 +63,16 @@
     <h2>Phase-3 Evaluation Form</h2>
 
     <label for="trainee_name">Trainee Name:</label>
-    <input type="text" name="trainee_name" id="trainee_name" placeholder="e.g. Pvt. James R." required>
+    <input type="text" name="trainee_name" id="trainee_name" required placeholder="e.g. Pvt. James R.">
 
     <label for="trainee_rank">Trainee Rank:</label>
-    <input type="text" name="trainee_rank" id="trainee_rank" placeholder="e.g. Private" required>
+    <input type="text" name="trainee_rank" id="trainee_rank" required placeholder="e.g. Private">
 
     <label for="supervisor_name">Supervisor Name:</label>
-    <input type="text" name="supervisor_name" id="supervisor_name" placeholder="e.g. Sgt. Lewis" required>
+    <input type="text" name="supervisor_name" id="supervisor_name" required placeholder="e.g. Sgt. Lewis">
 
     <label for="supervisor_rank">Supervisor Rank:</label>
-    <input type="text" name="supervisor_rank" id="supervisor_rank" placeholder="e.g. Sergeant or higher" required>
+    <input type="text" name="supervisor_rank" id="supervisor_rank" required placeholder="e.g. Sergeant">
 
     <label for="vip_protection">Was 1 VIP Successfully Guarded?</label>
     <select name="vip_protection" id="vip_protection" required>
@@ -83,13 +82,13 @@
     </select>
 
     <label for="vip_rank">VIP Rank:</label>
-    <input type="text" name="vip_rank" id="vip_rank" placeholder="e.g. Major, Captain" required>
+    <input type="text" name="vip_rank" id="vip_rank" required placeholder="e.g. Major, Lieutenant">
 
     <label for="vip_username">VIP Username:</label>
-    <input type="text" name="vip_username" id="vip_username" placeholder="e.g. @IronFist42 or game username" required>
+    <input type="text" name="vip_username" id="vip_username" required placeholder="e.g. @IronFist42 or in-game name">
 
     <label for="performance_check">Performance Observations:</label>
-    <textarea name="performance_check" id="performance_check" rows="5" placeholder="Detail how the trainee performed, strengths, weaknesses..." required></textarea>
+    <textarea name="performance_check" id="performance_check" rows="5" required placeholder="Write how they performed, strengths, areas for improvement..."></textarea>
 
     <label for="final_decision">Final Result:</label>
     <select name="final_decision" id="final_decision" required>
@@ -99,7 +98,7 @@
     </select>
 
     <label for="additional_notes">Additional Notes (optional):</label>
-    <textarea name="additional_notes" id="additional_notes" rows="3" placeholder="Any extra remarks or supervisor's signature."></textarea>
+    <textarea name="additional_notes" id="additional_notes" rows="3" placeholder="Any extra comments or supervisor signature here."></textarea>
 
     <button type="submit">Submit Evaluation</button>
   </form>
